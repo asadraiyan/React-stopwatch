@@ -16,7 +16,65 @@
 
 .container {
     border: 2px solid red;
-    height: 30vh;
+    height: 25vh;
     width: 500px;
     background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stopwatch-display {
+    border: 2px solid blue;
+    height: 8vh;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    font-size: 50px;
+}
+
+.btn-container {
+    width: 350px;
+    border: 2px solid yellow;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.start {
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px grey;
+    cursor: pointer;
+}
+
+.stop {
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: rgb(253, 108, 56);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px grey;
+    cursor: pointer;
+}
+
+.reset {
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: rgb(126, 126, 248);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px grey;
+    cursor: pointer;
 }
