@@ -15,18 +15,20 @@
 }
 
 .container {
-    border: 2px solid red;
-    height: 25vh;
+    /* border: 2px solid red; */
+    height: 30vh;
     width: 500px;
     background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 2px 2px grey;
+    border-radius: 5px;
 }
 
 .stopwatch-display {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     height: 8vh;
     width: 350px;
     display: flex;
@@ -36,12 +38,12 @@
 }
 
 .display {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .btn-container {
     width: 350px;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     margin-top: 30px;
     display: flex;
     flex-direction: row;
