@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(215, 182, 247);
+    background-image: linear-gradient(260deg, #4987b1 0%, #c16ecf 100%);
 }
 
 .container {
@@ -35,16 +35,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
 }
 
 .display {
-    font-size: 45px;
+    font-size: 40px;
+
 }
 
 .btn-container {
     width: 350px;
     /* border: 2px solid yellow; */
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,8 +57,8 @@
 
 .start {
     font-size: 18px;
-    padding: 5px 20px;
-    background-color: greenyellow;
+    padding: 5px 15px;
+    background-color: rgb(168, 226, 81);
     border: none;
     border-radius: 3px;
     box-shadow: 1px 1px 2px 2px grey;
@@ -63,7 +67,7 @@
 
 .stop {
     font-size: 18px;
-    padding: 5px 20px;
+    padding: 5px 15px;
     background-color: rgb(253, 108, 56);
     border: none;
     border-radius: 3px;
@@ -73,10 +77,22 @@
 
 .reset {
     font-size: 18px;
-    padding: 5px 20px;
+    padding: 5px 15px;
     background-color: rgb(126, 126, 248);
     border: none;
     border-radius: 3px;
     box-shadow: 1px 1px 2px 2px grey;
     cursor: pointer;
+}
+
+.start:hover {
+    background-color: rgb(164, 255, 27)
+}
+
+.stop:hover {
+    background-color: rgb(240, 72, 11);
+}
+
+.reset:hover {
+    background-color: rgb(93, 93, 245);
 }
