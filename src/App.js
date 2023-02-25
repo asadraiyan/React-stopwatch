@@ -11,43 +11,52 @@ function App() {
   const start = () => {
     run()
     setIntervl(setInterval(run, 10))
+    setStatus(1)
   }
-  var updatedMs = time.ms, updatedS = time.s, updatedM = time.m, updatedH = time.h
+  let updatedMilliSec = time.ms
+  let updatedSec = time.s
+  let updatedMin = time.m
+  let updatedHrs = time.h
   const run = () => {
-    if (updatedM === 60) {
-      updatedH++;
-      updatedM = 0;
+    if (updatedMin === 60) {
+      updatedHrs++;
+      updatedMin = 0;
     }
-    if (updatedS === 60) {
-      updatedM++;
-      updatedS = 0;
+    if (updatedSec === 60) {
+      updatedMin++;
+      updatedSec = 0;
     }
-    if (updatedMs === 100) {
-      updatedS++;
-      updatedMs = 0;
+    if (updatedMilliSec === 100) {
+      updatedSec++;
+      updatedMilliSec = 0;
     }
-    updatedMs++;
-    return setTime({ ms: updatedMs, s: updatedS, m: updatedM, h: updatedH })
+    updatedMilliSec++;
+    return setTime({ ms: updatedMilliSec, s: updatedSec, m: updatedMin, h: updatedHrs })
   }
   const stop = () => {
     clearInterval(intervl)
-    setStatus(1)
+    setStatus(2)
   }
 
   const reset = () => {
     clearInterval(intervl)
-    setStatus(0)
     setTime({ ms: 0, s: 0, m: 0, h: 0 })
+    setStatus(0)
+  }
+
+  const resume = () => {
+    run()
+    setIntervl(setInterval(run, 10))
+    setStatus(1)
   }
 
   return (
     <div className="main-container">
       <div className="container">
+        <h1 className='heading'>My Stopwatch !</h1>
         <StopwatchDisplay time={time} />
-        <StopwatchButtons status={status} start={start} stop={stop} reset={reset} />
-
+        <StopwatchButtons status={status} start={start} stop={stop} reset={reset} resume={resume} />
       </div>
-
     </div>
   );
 }

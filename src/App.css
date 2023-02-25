@@ -8,22 +8,26 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(260deg, #4987b1 0%, #c16ecf 100%);
 }
 
+.heading {
+    margin-bottom: 30px;
+}
+
 .container {
     /* border: 2px solid red; */
-    height: 30vh;
+    height: 35vh;
     width: 500px;
     background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 2px 2px grey;
+    box-shadow: 2px 2px 2px 2px rgb(60, 60, 60);
     border-radius: 5px;
 }
 
@@ -38,11 +42,17 @@
     background-color: black;
     color: white;
     border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px rgb(60, 60, 60);
 }
 
 .display {
     font-size: 40px;
 
+}
+
+.milli-display {
+    font-size: 40px;
+    width: 40px;
 }
 
 .btn-container {
@@ -61,7 +71,7 @@
     background-color: rgb(168, 226, 81);
     border: none;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px 2px grey;
+    box-shadow: 1px 1px 2px 2px rgb(60, 60, 60);
     cursor: pointer;
 }
 
@@ -81,7 +91,17 @@
     background-color: rgb(126, 126, 248);
     border: none;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px 2px grey;
+    box-shadow: 1px 1px 2px 2px rgb(60, 60, 60);
+    cursor: pointer;
+}
+
+.resume {
+    font-size: 18px;
+    padding: 5px 15px;
+    background-color: rgb(241, 130, 167);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px rgb(60, 60, 60);
     cursor: pointer;
 }
 
@@ -95,4 +115,115 @@
 
 .reset:hover {
     background-color: rgb(93, 93, 245);
+}
+
+.resume:hover {
+    background-color: rgb(243, 78, 133);
+}
+
+@media only screen and (max-width: 520px) {
+    .container {
+        height: 30vh;
+        width: 375px;
+    }
+
+    .heading {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .stopwatch-display {
+        height: 7vh;
+        width: 250px;
+    }
+
+    .display {
+        font-size: 30px;
+    }
+
+    .milli-display {
+        font-size: 30px;
+        width: 30px;
+    }
+
+    .start {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+
+    .stop {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+
+
+    .reset {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+
+    .resume {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+
+    .btn-container {
+
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .container {
+        height: 28vh;
+        width: 330px;
+    }
+
+    .heading {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .stopwatch-display {
+        height: 5vh;
+        width: 225px;
+    }
+
+    .display {
+        font-size: 25px;
+    }
+
+    .milli-display {
+        font-size: 25px;
+        width: 28px;
+    }
+
+    .start {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    .stop {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    .reset {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    .resume {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    .btn-container {
+
+        justify-content: space-around;
+        width: 250px;
+        margin-top: 30px;
+
+    }
 }
